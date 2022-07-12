@@ -1,0 +1,27 @@
+@import '../../globalStyles/variables';
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 65px;
+  background-color: map-get($theme, background);
+  box-shadow: 0 0 15px map-get($theme, drop-shadow);
+  margin-bottom: 64px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+
+  li {
+    transition: ease 0.3s;
+  }
+
+  li:hover {
+    transform: scale(1.2);
+  }
+}
