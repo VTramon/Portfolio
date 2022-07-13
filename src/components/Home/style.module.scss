@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  align-items: center;
+
+  height: calc(100vh - 128px); //tamanho da tela menos o tamanho do header
+
+  margin-bottom: 64px;
+}
+
+.home__banner {
+  width: 40vw;
+
+  h1 {
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+.home__image_container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  padding-right: 32px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
