@@ -11,13 +11,13 @@ const Home = () => {
         </h1>
       </div>
 
-      <div className={styles.home__image_container}>
+      {/* <div className={styles.home__image_container}>
         <div>
           <h2>Vitor Ramon</h2>
 
-          <img src="/notebook.png" alt="notebook" width="700" />
+          <img src="/image.png" alt="notebook" width="700" />
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

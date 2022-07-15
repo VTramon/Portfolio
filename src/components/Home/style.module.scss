@@ -1,17 +1,20 @@
 .home {
   display: flex;
   align-items: center;
+  background-image: url('../../../public/background/ink.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  height: calc(100vh - 128px); //tamanho da tela menos o tamanho do header
+  height: 100vh;
 
-  margin-bottom: 64px;
+  padding-top: 64px;
 }
 
 .home__banner {
-  width: 40vw;
+  width: 100%;
 
   h1 {
-    font-size: 48px;
+    font-size: 56px;
     text-align: center;
   }
 }
@@ -32,5 +35,37 @@
   h2 {
     font-size: 32px;
     margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .home__banner {
+    h1 {
+      font-size: 48px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .home__banner {
+    h1 {
+      font-size: 80px;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .home__banner {
+    h1 {
+      font-size: 96px;
+    }
+  }
+}
+
+@media (min-width: 1780px) {
+  .home__banner {
+    h1 {
+      font-size: 120px;
+    }
   }
 }
