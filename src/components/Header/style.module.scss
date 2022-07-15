@@ -1,27 +1,41 @@
 @import '../../globalStyles/variables';
 
 .header {
+  position: absolute;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+
+  width: 100%;
   height: 64px;
-  background-color: map-get($theme, background);
+
+  background-color: transparent;
   box-shadow: 0 0 15px map-get($theme, drop-shadow);
-  margin-bottom: 64px;
 }
 
 .header__nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 50vw;
-
-  li {
-    transition: ease 0.3s;
-  }
+  width: 100%;
 
   li:hover {
     transform: scale(1.2);
+  }
+}
+
+@media (min-width: 720px) {
+  .header__nav {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1780px) {
+  .header {
+    height: 100px;
+  }
+  .header__nav {
+    font-size: 1.5em;
   }
 }
