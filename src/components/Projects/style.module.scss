@@ -1,0 +1,72 @@
+@import '../../globalStyles/variables';
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+
+  h3 {
+    font-size: 1.9em;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 80vw;
+  height: 350px;
+
+  position: relative;
+
+  margin-bottom: 32px;
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  width: 100%;
+  height: 100%;
+
+  padding: 16px;
+
+  background-color: map-get($theme, card-background);
+  border-radius: 15px;
+
+  position: absolute;
+
+  h4 {
+    font-size: 1.5em;
+    margin-bottom: 16px;
+  }
+}
+.card__links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  svg {
+    // fill: black;
+    width: 30px;
+    height: 30px;
+  }
+}
