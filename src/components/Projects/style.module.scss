@@ -12,18 +12,21 @@
     font-size: 1.9em;
   }
 }
+.inverted .notInverted {
+  flex-direction: column;
+}
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  width: 80vw;
+  width: 90vw;
   height: 350px;
 
   position: relative;
 
-  margin-bottom: 32px;
+  margin-bottom: 48px;
   border-radius: 15px;
 
   overflow: hidden;
@@ -31,6 +34,7 @@
   img {
     height: 100%;
     object-fit: cover;
+    border-radius: 15px;
   }
 }
 
@@ -39,10 +43,12 @@
   flex-direction: column;
   align-items: center;
   padding-top: 16px;
+
   width: 100%;
   height: 100%;
 
-  padding: 16px;
+  // padding: 16px;
+  overflow: hidden;
 
   background-color: map-get($theme, card-background);
   border-radius: 15px;
@@ -52,21 +58,111 @@
   h4 {
     font-size: 1.5em;
     margin-bottom: 16px;
+    flex: 1;
+  }
+
+  p {
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 24px;
   }
 }
+
 .card__links {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 90px;
+  flex: 3;
+  justify-content: flex-start;
+  align-items: flex-end;
+  // align-items: center;
+  width: 100%;
 
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  // margin-top: /;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
 
   svg {
     // fill: black;
     width: 30px;
     height: 30px;
+    height: 30px;
+
+    margin: 0 8px;
+
+    transition: ease 0.5;
+  }
+
+  svg:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 480px) {
+  .card {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 770px) {
+  .card {
+    width: 70vw;
+    max-width: 970px;
+    flex-direction: unset;
+    justify-content: flex-end;
+
+    margin-bottom: 64px;
+
+    img {
+      height: 100%;
+      max-width: 47%;
+      float: right;
+    }
+  }
+
+  .card__details {
+    width: 65%;
+
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+
+    p {
+      background-color: map-get($theme, card-background);
+      border-radius: 8px;
+    }
+    // position: unset;
+  }
+
+  .inverted {
+    flex-direction: row-reverse;
+    right: 0;
+
+    .card__details {
+      right: 0;
+      // left: 40%;
+    }
+
+    .card__links {
+      justify-content: flex-end;
+    }
+  }
+
+  .notInverted {
+    // flex-direction: row;
+
+    .card__details {
+      left: 0;
+      // right: 40%;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .card {
+    margin-bottom: 100px;
+  }
+
+  .card__details {
+    width: 55%;
   }
 }

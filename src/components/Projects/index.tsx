@@ -2,6 +2,7 @@ import { ExternalLink, GitHub } from '../Icons'
 import styles from './style.module.scss'
 
 type ProjectCardProps = {
+  isInverted: 'inverted' | 'notInverted'
   data: {
     image: string
     alt: string
@@ -14,8 +15,15 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.card__details}>
+    <div className={`${styles.card} ${styles[props.isInverted]}`}>
+      <div
+        // style={
+        //   props.isInverted
+        //     ? { flexDirection: 'column-reverse' }
+        //     : { flexDirection: 'column' }
+        // }
+        className={styles.card__details}
+      >
         <h4>{props.data.name}</h4>
         <p>{props.data.text}</p>
 
@@ -23,6 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           <a href={props.data.site}>
             <GitHub />
           </a>
+
           <a href={props.data.github}>
             <ExternalLink />
           </a>
@@ -67,14 +76,6 @@ const Projects = () => {
       github: 'https://github.com/VTramon/Rocket-NFTs',
     },
     {
-      image: '/projects/book_finder.webp',
-      alt: 'Book finder site',
-      name: 'Book finder',
-      text: 'A website tha make possible to find any book you want. This website was created using React.js, Styled-components and TypeScript',
-      site: 'https://book-finder-sandy.vercel.app/',
-      github: 'https://github.com/VTramon/Book-finder',
-    },
-    {
       image: '/projects/one_piece.webp',
       alt: 'One Piece site',
       name: 'One Piece',
@@ -90,13 +91,26 @@ const Projects = () => {
       site: 'https://admin-template-ten.vercel.app/',
       github: 'https://github.com/VTramon/ADMIN-TEMPLATE',
     },
+    {
+      image: '/projects/book_finder.webp',
+      alt: 'Book finder site',
+      name: 'Book finder',
+      text: 'A website tha make possible to find any book you want. This website was created using React.js, Styled-components and TypeScript',
+      site: 'https://book-finder-sandy.vercel.app/',
+      github: 'https://github.com/VTramon/Book-finder',
+    },
   ]
   return (
     <section id="projects" className={styles.projects}>
       <h3>Projects</h3>
 
       {cardList.map((item, index) => {
-        return <ProjectCard data={item} />
+        return (
+          <ProjectCard
+            isInverted={index % 2 === 0 ? 'notInverted' : 'inverted'}
+            data={item}
+          />
+        )
       })}
     </section>
   )
