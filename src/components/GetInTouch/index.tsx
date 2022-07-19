@@ -13,7 +13,9 @@ const GetInTouch = () => {
 
         <div className={styles.GetInTouch__container_button}>
           <div className={styles.GetInTouch__background_button} />
-          <button type="button">Say Hello</button>
+          <button>
+            <a href="mailto:vitorr.ooliveira@gmail.com">Say Hello</a>
+          </button>
         </div>
       </div>
     </section>

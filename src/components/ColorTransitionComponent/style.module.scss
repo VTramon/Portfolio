@@ -4,5 +4,8 @@
   height: 86px;
   width: 100%;
 
-  background: linear-gradient(#070906, #313131);
+  background: linear-gradient(
+    map-get($theme, home-background),
+    map-get($theme, background)
+  );
 }
