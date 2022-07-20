@@ -1,8 +1,45 @@
+import { useEffect, useState } from 'react'
 import styles from './style.module.scss'
 
+// type HeaderProps = {
+//   isVisible: 'visible' | 'hidden'
+// }
+
 const Header = () => {
+  // const [scrollPosition, setScrollPosition] = useState<number>(window.scrollY)
+
+  const [position, setPosition] = useState(window.scrollY)
+  const [isVisible, setIsVisible] = useState<'visible' | 'hidden'>('visible')
+
+  const handleScroll = () => {
+    const moving = window.scrollY
+
+    if (moving > position) {
+      setIsVisible('hidden')
+      setPosition(moving)
+    } else {
+      setIsVisible('visible')
+      setPosition(moving)
+    }
+  }
+
+  useEffect(() => {
+    // handleScroll()
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [window.scrollY])
+
+  const backgroundColor = position <= 230 ? 'transparent' : '#1d1d1db5'
+
   return (
-    <header className={styles.header}>
+    <header
+      style={{ backgroundColor: backgroundColor, transition: 'ease 0.5s' }}
+      className={`${styles.header} ${styles[isVisible]}`}
+    >
       <nav className={styles.header__nav}>
         <li>
           <a href="#home">Home</a>
