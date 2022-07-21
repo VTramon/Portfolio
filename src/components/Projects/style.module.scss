@@ -50,7 +50,15 @@
   // padding: 16px;
   overflow: hidden;
 
-  background-color: map-get($theme, card-background);
+  // background-color: map-get($theme, card-background);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: linear-gradient(
+    315deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.938)
+  );
+
   border-radius: 15px;
 
   position: absolute;
@@ -122,12 +130,17 @@
   .card__details {
     width: 65%;
 
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
     top: 0;
     bottom: 0;
     background-color: transparent;
+    background: unset;
 
     p {
-      background-color: map-get($theme, card-background);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-radius: 8px;
     }
     // position: unset;
@@ -136,6 +149,14 @@
   .inverted {
     flex-direction: row-reverse;
     right: 0;
+
+    p {
+      background: linear-gradient(
+        315deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 0.2)
+      );
+    }
 
     .card__details {
       right: 0;
@@ -149,6 +170,14 @@
 
   .notInverted {
     // flex-direction: row;
+
+    p {
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 0.2)
+      );
+    }
 
     .card__details {
       left: 0;
