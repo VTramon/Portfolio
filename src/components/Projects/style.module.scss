@@ -53,26 +53,24 @@
   // background-color: map-get($theme, card-background);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: linear-gradient(
-    315deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(0, 0, 0, 0.938)
-  );
+  background: linear-gradient(315deg, rgba(7, 7, 7, 0.1), rgba(0, 0, 0, 0.938));
 
   border-radius: 15px;
 
   position: absolute;
 
   h4 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-bottom: 16px;
     flex: 1;
   }
 
   p {
     text-overflow: ellipsis;
+    font-size: 1.2em;
     width: 100%;
     padding: 24px;
+    font-weight: 500;
   }
 }
 
