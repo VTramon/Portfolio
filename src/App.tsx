@@ -1,5 +1,4 @@
 import About from './components/About'
-import ColorTransitionComponent from './components/ColorTransitionComponent'
 import Footer from './components/Footer'
 import GetInTouch from './components/GetInTouch'
 import Header from './components/Header'
@@ -11,7 +10,6 @@ const App = () => {
     <>
       <Header />
       <Home />
-      <ColorTransitionComponent />
       <About />
       <Projects />
       <GetInTouch />

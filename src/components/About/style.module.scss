@@ -1,0 +1,50 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+
+  h3 {
+    font-size: 1.9em;
+    width: 100%;
+    text-align: start;
+
+    padding: 0 5vw;
+    margin-bottom: 32px;
+  }
+}
+
+.about__introduction {
+  width: 90vw;
+
+  margin-bottom: 56px;
+
+  p {
+    text-indent: 16px;
+    font-size: 1.1em;
+  }
+}
+
+.about__logo_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 1080px;
+  padding: 0 5vw;
+
+  li {
+    margin: 0 8px 16px 8px;
+  }
+
+  img {
+    height: 50px;
+  }
+}
