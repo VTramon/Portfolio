@@ -6,8 +6,6 @@ import styles from './style.module.scss'
 // }
 
 const Header = () => {
-  // const [scrollPosition, setScrollPosition] = useState<number>(window.scrollY)
-
   const [position, setPosition] = useState(window.scrollY)
   const [isVisible, setIsVisible] = useState<'visible' | 'hidden'>('visible')
 

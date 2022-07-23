@@ -27,6 +27,8 @@
 .hidden {
   top: -80px;
   transition: top 0.4s ease;
+
+  box-shadow: unset;
 }
 
 .header__nav {
@@ -50,6 +52,11 @@
   .header {
     height: 100px;
   }
+
+  .hidden {
+    top: -100px;
+  }
+
   .header__nav {
     font-size: 1.5em;
   }

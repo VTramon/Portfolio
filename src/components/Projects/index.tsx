@@ -16,23 +16,16 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   return (
     <div className={`${styles.card} ${styles[props.isInverted]}`}>
-      <div
-        // style={
-        //   props.isInverted
-        //     ? { flexDirection: 'column-reverse' }
-        //     : { flexDirection: 'column' }
-        // }
-        className={styles.card__details}
-      >
+      <div className={styles.card__details}>
         <h4>{props.data.name}</h4>
         <p>{props.data.text}</p>
 
         <div className={styles.card__links}>
-          <a href={props.data.site}>
+          <a href={props.data.site} rel="noreferrer" target="_blank">
             <GitHub />
           </a>
 
-          <a href={props.data.github}>
+          <a href={props.data.github} rel="noreferrer" target="_blank">
             <ExternalLink />
           </a>
         </div>

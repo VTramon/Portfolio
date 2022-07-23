@@ -10,14 +10,6 @@ const Home = () => {
           <strong>Developer</strong>
         </h1>
       </div>
-
-      {/* <div className={styles.home__image_container}>
-        <div>
-          <h2>Vitor Ramon</h2>
-
-          <img src="/image.png" alt="notebook" width="700" />
-        </div>
-      </div> */}
     </section>
   )
 }

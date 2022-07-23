@@ -27,27 +27,35 @@ const About = () => {
 
       <ul className={styles.about__logo_list}>
         <li>
-          <img src="/languages/html.webp" alt="html logo" />
+          <img loading="lazy" src="/languages/html.webp" alt="html logo" />
         </li>
 
         <li>
-          <img src="/languages/css.webp" alt="css logo" />
+          <img loading="lazy" src="/languages/css.webp" alt="css logo" />
         </li>
 
         <li>
-          <img src="/languages/typescript.webp" alt="typescript logo" />
+          <img
+            loading="lazy"
+            src="/languages/typescript.webp"
+            alt="typescript logo"
+          />
         </li>
 
         <li>
-          <img src="/languages/react.webp" alt="react logo" />
+          <img loading="lazy" src="/languages/react.webp" alt="react logo" />
         </li>
 
         <li>
-          <img src="/languages/dart.webp" alt="dart logo" />
+          <img loading="lazy" src="/languages/dart.webp" alt="dart logo" />
         </li>
 
         <li>
-          <img src="/languages/flutter.webp" alt="flutter logo" />
+          <img
+            loading="lazy"
+            src="/languages/flutter.webp"
+            alt="flutter logo"
+          />
         </li>
       </ul>
     </section>
