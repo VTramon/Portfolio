@@ -4,11 +4,22 @@
   height: 86px;
   width: 100%;
 
-  position: absolute;
-  top: 0;
+  margin-bottom: 5vh;
 
   background: linear-gradient(
     map-get($theme, home-background),
     map-get($theme, background)
   );
+}
+
+@media (min-width: 460px) {
+  .transition {
+    margin-bottom: 10vh;
+  }
+}
+
+@media (min-width: 770px) {
+  .transition {
+    margin-bottom: 20vh;
+  }
 }
