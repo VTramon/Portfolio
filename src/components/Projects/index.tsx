@@ -30,7 +30,10 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           </a>
         </div>
       </div>
-      <img src={props.data.image} loading="lazy" alt={props.data.alt} />
+
+      <a href={props.data.site} rel="noreferrer" target="_blank">
+        <img src={props.data.image} loading="lazy" alt={props.data.alt} />
+      </a>
     </div>
   )
 }
