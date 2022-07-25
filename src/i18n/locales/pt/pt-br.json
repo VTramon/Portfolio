@@ -1,0 +1,23 @@
+{
+  "translation": {
+    "header_home_link": "Início",
+    "header_about_link": "Sobre",
+    "header_projects_link": "Projetos",
+    "header_contact_link": "Contato",
+    "home_text": "<strong>Desenvolvedor</strong> <br/> Front end | Mobile",
+    "home_text_areas": "Front end | Mobile",
+    "home_text_job": "Desenvolvedor",
+    "about_title": "Olá!",
+    "about_introduction_1": "Meu nome é Vitor, eu moro no Rio e atualmente estou estudando Ciência da Computação na Universidade Veiga de Almeida. Meus projetos incluem landing pages, templates e websites. Se você está interessado nas ferramentas e softwares que eu uso pode continuar olhando minha página.",
+    "about_introduction_2": "No meu tempo livre eu gosto de assistir filmes, jogar e desenvolver para praticar um pouco. Eu sempre estou interessado em ouvir sobre novos projetos, então sinta-se livre para me mandar uma mensagem.",
+    "project_pokedex": "Uma Pokedex online onde você pode achar seus pokemons favoritos a qualquer hora. Esse website foi criado usando Next.js , TypeScript, Sass e Docker.",
+    "project_be_healthy": "Uma landing page sobre alimentação saudável com um design simples e de fácil entendimento. Essa landing page foi criada usando Next.js, TypeScript e Sass.",
+    "project_rocket_nfts": "Uma landing page sobre NFT, essa landing page foi um desafio proposto na plataforma da RocketSeat. Ela foi criada usando HTML e CSS.",
+    "project_one_piece": "Uma landing page sobre os personagens principais de One Piece. Essa landing page foi criada com React.js, Sass, TypeScript e Docker.",
+    "project_admin_template": "Um template de administração de usuários com temas claro e escuro, e uma bela tela de login. Esse template foi criado com Next.js, CSS, TypeScript e Firebase",
+    "projects_title": "Projetos",
+    "contact_title": "Entre Em Contato",
+    "contact_text": "Se você está interessado nos meu serviços você pode me contactar clicando no botão abaixo.",
+    "contact_button": "Diga Oi"
+  }
+}

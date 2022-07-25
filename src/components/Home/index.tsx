@@ -1,3 +1,4 @@
+import { Trans } from 'react-i18next'
 import styles from './style.module.scss'
 
 const Home = () => {
@@ -5,9 +6,9 @@ const Home = () => {
     <section id="home" className={styles.home}>
       <div className={styles.home__banner}>
         <h1>
-          Front end | Mobile
-          <br />
-          <strong>Developer</strong>
+          <Trans components={{ bold: <strong />, nextLine: <br /> }}>
+            home_text
+          </Trans>
         </h1>
       </div>
     </section>

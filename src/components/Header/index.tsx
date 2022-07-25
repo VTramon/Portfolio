@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import styles from './style.module.scss'
-
-// type HeaderProps = {
-//   isVisible: 'visible' | 'hidden'
-// }
 
 const Header = () => {
   const [position, setPosition] = useState(window.scrollY)
   const [isVisible, setIsVisible] = useState<'visible' | 'hidden'>('visible')
 
+  const hideHeaderOnClick = () => {
+    setTimeout(() => {
+      setIsVisible('hidden')
+    }, 1000)
+  }
   const handleScroll = () => {
     const moving = window.scrollY
 
@@ -31,6 +33,8 @@ const Header = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [window.scrollY])
 
+  const { t } = useTranslation()
+
   const backgroundColor = position <= 230 ? 'transparent' : '#1d1d1db5'
 
   return (
@@ -40,19 +44,27 @@ const Header = () => {
     >
       <nav className={styles.header__nav}>
         <li>
-          <a href="#home">Home</a>
+          <button onClick={() => hideHeaderOnClick()}>
+            <a href="#home">{t('header_home_link')}</a>
+          </button>
         </li>
 
         <li>
-          <a href="#about">About</a>
+          <button onClick={() => hideHeaderOnClick()}>
+            <a href="#about">{t('header_about_link')}</a>
+          </button>
         </li>
 
         <li>
-          <a href="#projects">Projects</a>
+          <button onClick={() => hideHeaderOnClick()}>
+            <a href="#projects">{t('header_projects_link')}</a>
+          </button>
         </li>
 
         <li>
-          <a href="#GetInTouch">Contact</a>
+          <button onClick={() => hideHeaderOnClick()}>
+            <a href="#GetInTouch">{t('header_contact_link')}</a>
+          </button>
         </li>
       </nav>
     </header>

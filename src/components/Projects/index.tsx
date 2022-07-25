@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { ExternalLink, GitHub } from '../Icons'
 import styles from './style.module.scss'
 
@@ -39,6 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
 }
 
 const Projects = () => {
+  const { t } = useTranslation()
   const cardList: {
     image: string
     alt: string
@@ -51,7 +53,7 @@ const Projects = () => {
       image: '/projects/pokedex.webp',
       alt: 'Pokedex site',
       name: 'Pokedex',
-      text: 'An online Pokedex where you can check your favorite Pokemons anytime. This website was created using Next.js, TypeScript, SASS and Docker',
+      text: t('project_pokedex'),
       site: 'https://pokedex-mu-ochre.vercel.app/',
       github: 'https://github.com/VTramon/Pokedex',
     },
@@ -59,7 +61,7 @@ const Projects = () => {
       image: '/projects/be_healthy.webp',
       alt: 'Be healthy site',
       name: 'Be healthy',
-      text: 'An landing page about healthy food with simple design and easy understanding. This landing page was created using Next.js, TypeScript and SASS.',
+      text: t('project_be_healthy'),
       site: 'https://be-healthy-indol.vercel.app/',
       github: 'https://github.com/VTramon/Be-healthy',
     },
@@ -67,7 +69,7 @@ const Projects = () => {
       image: '/projects/rocket_nfts.webp',
       alt: 'Rocket NFTs site',
       name: 'Rocket NFTs',
-      text: 'A landing page about NFT, this landing page was a challenge proposed by Rocket Seat in website. This landing page was created using HTML and CSS.',
+      text: t('project_rocket_nfts'),
       site: 'https://rocket-nft.vercel.app/',
       github: 'https://github.com/VTramon/Rocket-NFTs',
     },
@@ -75,7 +77,7 @@ const Projects = () => {
       image: '/projects/one_piece.webp',
       alt: 'One Piece site',
       name: 'One Piece',
-      text: 'A landing page abou the main One Piece characters. This landing page was created using React.js, SASS, TypeScript and Docker',
+      text: t('project_one_piece'),
       site: 'https://one-piece-theta.vercel.app/',
       github: 'https://github.com/VTramon/landing-page-One-Piece',
     },
@@ -83,26 +85,19 @@ const Projects = () => {
       image: '/projects/admin_template.webp',
       alt: 'Admin template site',
       name: 'Admin Template',
-      text: 'A admin template with dark and light theme, and a beautiful login page. This template was created using Next.js, CSS, TypeScript and Firebase.',
+      text: t('project_admin_template'),
       site: 'https://admin-template-ten.vercel.app/',
       github: 'https://github.com/VTramon/ADMIN-TEMPLATE',
-    },
-    {
-      image: '/projects/book_finder.webp',
-      alt: 'Book finder site',
-      name: 'Book finder',
-      text: 'A website tha make possible to find any book you want. This website was created using React.js, Styled-components and TypeScript',
-      site: 'https://book-finder-sandy.vercel.app/',
-      github: 'https://github.com/VTramon/Book-finder',
     },
   ]
   return (
     <section id="projects" className={styles.projects}>
-      <h3>Projects</h3>
+      <h3>{t('projects_title')}</h3>
 
       {cardList.map((item, index) => {
         return (
           <ProjectCard
+            key={index}
             isInverted={index % 2 === 0 ? 'notInverted' : 'inverted'}
             data={item}
           />
