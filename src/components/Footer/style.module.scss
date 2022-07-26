@@ -9,9 +9,6 @@
   height: 42px;
 
   padding-bottom: 24px;
-
-  // background-image: url('../../../public/background/ink_2.webp');
-  // background-size: cover;
 }
 
 .footer__credit {
@@ -19,17 +16,6 @@
     font-size: 0.7em;
   }
 }
-
-// .footer__gradient {
-//   position: absolute;
-//   top: 0;
-
-//   width: 100%;
-//   height: 100px;
-//   // background: linear-gradient(map-get($theme, background), transparent);
-
-//   z-index: 10;
-// }
 
 .footer__social_medias_container {
   display: flex;
@@ -68,8 +54,6 @@
 @media (min-width: 769px) {
   .footer__social_medias_container {
     width: min-content;
-    // display: none;
-    // height: 0;
     position: -webkit-fixed;
     position: fixed;
     left: 32px;
@@ -97,7 +81,6 @@
     content: '';
     width: 0;
     height: 100px;
-    // margin-top: 8px;
     border-left: 1px dashed white;
 
     z-index: 100;

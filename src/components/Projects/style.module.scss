@@ -82,17 +82,10 @@
   flex: 3;
   justify-content: flex-start;
   align-items: flex-end;
-  // align-items: center;
   width: 100%;
   padding-bottom: 8px;
 
-  // margin-top: /;
-  // position: absolute;
-  // bottom: 0;
-  // left: 0;
-
   svg {
-    // fill: black;
     width: 30px;
     height: 30px;
     height: 30px;
@@ -129,7 +122,6 @@
     img {
       height: 100%;
       width: 100%;
-      // max-width: 47%;
       float: right;
 
       position: relative;
@@ -172,7 +164,6 @@
 
     .card__details {
       right: 0;
-      // left: 40%;
     }
 
     .card__links {
@@ -191,7 +182,6 @@
 
     .card__details {
       left: 0;
-      // right: 40%;
     }
   }
 }

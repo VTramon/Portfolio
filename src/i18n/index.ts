@@ -18,6 +18,4 @@ i18n.use(initReactI18next).init({
   },
 })
 
-console.log('testing init')
-
 export default i18n
