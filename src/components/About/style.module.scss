@@ -1,3 +1,5 @@
+@import '../../globalStyles/variables';
+
 .about {
   display: flex;
   flex-direction: column;
@@ -35,16 +37,39 @@
   align-items: center;
   flex-wrap: wrap;
 
-  width: 100%;
   max-width: 1080px;
-  padding: 0 5vw;
+
+  border: 1px solid map-get($theme, container-border);
+  border-radius: 15px;
+
+  margin: 0 5vw;
+  padding-top: 32px;
+
+  position: relative;
+
+  h4 {
+    position: absolute;
+    top: -16px;
+    left: 16px;
+
+    background-color: map-get($theme, background);
+
+    padding: 0 8px;
+
+    font-size: 1.6em;
+  }
 
   li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     margin: 0 8px 16px 8px;
   }
 
-  img {
+  svg {
     height: 50px;
+    width: 50px;
   }
 }
 
@@ -60,7 +85,12 @@
   }
 
   .about__logo_list {
-    padding: 0 10vw;
+    margin: 0 10vw;
+
+    svg {
+      height: 75px;
+      width: 75px;
+    }
   }
 }
 
@@ -76,6 +106,11 @@
   }
 
   .about__logo_list {
-    padding: 0 15vw;
+    margin: 0 15vw;
+
+    svg {
+      height: 100px;
+      width: 100px;
+    }
   }
 }

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import ColorTransitionComponent from '../ColorTransitionComponent'
+import { CSS, Dart, Flutter, HTML, ReactJs, Sass, TypeScript } from '../Icons'
 import styles from './style.module.scss'
 
 const About = () => {
@@ -20,36 +21,41 @@ const About = () => {
       </div>
 
       <ul className={styles.about__logo_list}>
+        <h4>Stack</h4>
+
         <li>
-          <img loading="lazy" src="/languages/html.webp" alt="html logo" />
+          <HTML />
+          <span>HTML</span>
         </li>
 
         <li>
-          <img loading="lazy" src="/languages/css.webp" alt="css logo" />
+          <CSS />
+          <span>CSS</span>
         </li>
 
         <li>
-          <img
-            loading="lazy"
-            src="/languages/typescript.webp"
-            alt="typescript logo"
-          />
+          <Sass />
+          <span>Sass</span>
         </li>
 
         <li>
-          <img loading="lazy" src="/languages/react.webp" alt="react logo" />
+          <TypeScript />
+          <span>TypeScript</span>
         </li>
 
         <li>
-          <img loading="lazy" src="/languages/dart.webp" alt="dart logo" />
+          <ReactJs />
+          <span>React.js</span>
         </li>
 
         <li>
-          <img
-            loading="lazy"
-            src="/languages/flutter.webp"
-            alt="flutter logo"
-          />
+          <Dart />
+          <span>Dart</span>
+        </li>
+
+        <li>
+          <Flutter />
+          <span>Flutter</span>
         </li>
       </ul>
     </section>
