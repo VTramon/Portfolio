@@ -43,7 +43,7 @@ const Header = () => {
     >
       <nav className={styles.header__nav}>
         <li>
-          <button onClick={() => hideHeaderOnClick()}>
+          <button>
             <a href="#home">{t('header_home_link')}</a>
           </button>
         </li>
