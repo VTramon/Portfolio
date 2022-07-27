@@ -44,6 +44,9 @@
   padding: 3px;
   border-radius: 10px;
 
+  width: fit-content;
+  height: fit-content;
+
   button {
     padding: 8px;
 
@@ -84,4 +87,48 @@
   }
 
   transform: scale(1.1);
+}
+
+.GetInTouch__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 75%;
+
+  input,
+  textarea {
+    width: 100%;
+
+    margin-bottom: 32px;
+    padding-left: 8px;
+
+    border-radius: 8px;
+
+    background-color: map-get($theme, container-border);
+    color: map-get($theme, input-text);
+    font-weight: 600;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: map-get($theme, input-placeholder);
+    font-weight: 600;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  input {
+    height: 32px;
+  }
+
+  textarea {
+    height: 150px;
+    resize: none;
+
+    padding-top: 8px;
+  }
 }
