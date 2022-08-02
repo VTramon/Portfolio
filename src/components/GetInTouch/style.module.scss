@@ -6,7 +6,7 @@
   align-items: center;
 
   width: 100%;
-  height: calc(100vh - 56px - 42px); // tela - social medias - footer
+  min-height: calc(100vh - 56px - 42px); // tela - social medias - footer
 
   margin-bottom: 100px;
 }
