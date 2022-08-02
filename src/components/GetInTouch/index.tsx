@@ -44,13 +44,23 @@ const GetInTouch = () => {
           name="emailForm"
           className={styles.GetInTouch__form}
         >
-          <input type="text" placeholder="Name" name="name" required />
+          <input
+            type="text"
+            name="name"
+            placeholder={t('contact_name_input')}
+            required
+          />
 
-          <input placeholder="Email" name="email" type="email" required />
+          <input
+            name="email"
+            placeholder={t('contact_email_input')}
+            type="email"
+            required
+          />
 
           <textarea
-            placeholder="Message"
             name="message"
+            placeholder={t('contact_message_input')}
             id="mailContent"
             required
           />

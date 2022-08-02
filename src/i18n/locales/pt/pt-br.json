@@ -17,6 +17,9 @@
     "project_admin_template": "Um template de administração de usuários com temas claro e escuro, e uma bela tela de login. Esse template foi criado com Next.js, CSS, TypeScript e Firebase",
     "projects_title": "Projetos",
     "contact_title": "Entre Em Contato",
+    "contact_name_input": "Nome",
+    "contact_email_input": "Email",
+    "contact_message_input": "Mensagem",
     "contact_text": "Se você está interessado nos meu serviços você pode me contactar clicando no botão abaixo.",
     "contact_button": "Diga Oi"
   }

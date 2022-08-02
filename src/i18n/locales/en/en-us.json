@@ -17,6 +17,9 @@
     "project_admin_template": "A admin template with dark and light theme, and a beautiful login page. This template was created using Next.js, CSS, TypeScript and Firebase.",
     "projects_title": "Projects",
     "contact_title": "Get In Touch",
+    "contact_name_input": "Name",
+    "contact_email_input": "Email",
+    "contact_message_input": "Message",
     "contact_text": "If you are interested in my services you can contact me clicking in the button bellow.",
     "contact_button": "Say Hello"
   }
