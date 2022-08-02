@@ -1,5 +1,17 @@
+/* eslint-disable array-callback-return */
 import { useTranslation } from 'react-i18next'
-import { ExternalLink, GitHub } from '../Icons'
+import {
+  CSS,
+  Docker,
+  ExternalLink,
+  Firebase,
+  GitHub,
+  HTML,
+  ReactJs,
+  Redux,
+  Sass,
+  TypeScript,
+} from '../Icons'
 import styles from './style.module.scss'
 
 type ProjectCardProps = {
@@ -11,15 +23,84 @@ type ProjectCardProps = {
     text: string
     site: string
     github: string
+    stack: stackProps[]
   }
 }
 
+type stackProps =
+  | 'react'
+  | 'html'
+  | 'css'
+  | 'sass'
+  | 'typescript'
+  | 'docker'
+  | 'redux'
+  | 'firebase'
+
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
+  const displayProperStack = (item: stackProps, index: number) => {
+    switch (item) {
+      case 'css':
+        return (
+          <li key={index}>
+            <CSS />
+          </li>
+        )
+      case 'docker':
+        return (
+          <li key={index}>
+            <Docker />
+          </li>
+        )
+      case 'html':
+        return (
+          <li key={index}>
+            <HTML />
+          </li>
+        )
+      case 'sass':
+        return (
+          <li key={index}>
+            <Sass />
+          </li>
+        )
+      case 'typescript':
+        return (
+          <li key={index}>
+            <TypeScript />
+          </li>
+        )
+      case 'react':
+        return (
+          <li key={index}>
+            <ReactJs />
+          </li>
+        )
+      case 'redux':
+        return (
+          <li key={index}>
+            <Redux />
+          </li>
+        )
+      case 'firebase':
+        return (
+          <li key={index}>
+            <Firebase />
+          </li>
+        )
+    }
+  }
   return (
     <div className={`${styles.card} ${styles[props.isInverted]}`}>
       <div className={styles.card__details}>
         <h4>{props.data.name}</h4>
         <p>{props.data.text}</p>
+
+        <ul className={styles.card__stack_icons}>
+          {props.data.stack.map((item, index) => {
+            return displayProperStack(item, index)
+          })}
+        </ul>
 
         <div className={styles.card__links}>
           <a href={props.data.site} rel="noreferrer" target="_blank">
@@ -89,6 +170,7 @@ const Projects = () => {
     text: string
     site: string
     github: string
+    stack: stackProps[]
   }[] = [
     {
       image: '/projects/pokedex',
@@ -97,6 +179,7 @@ const Projects = () => {
       text: t('project_pokedex'),
       site: 'https://pokedex-mu-ochre.vercel.app/',
       github: 'https://github.com/VTramon/Pokedex',
+      stack: ['react', 'typescript', 'sass', 'docker', 'redux'],
     },
     {
       image: '/projects/be_healthy',
@@ -105,6 +188,7 @@ const Projects = () => {
       text: t('project_be_healthy'),
       site: 'https://be-healthy-indol.vercel.app/',
       github: 'https://github.com/VTramon/Be-healthy',
+      stack: ['react', 'typescript', 'sass'],
     },
     {
       image: '/projects/rocket_nfts',
@@ -113,6 +197,7 @@ const Projects = () => {
       text: t('project_rocket_nfts'),
       site: 'https://rocket-nft.vercel.app/',
       github: 'https://github.com/VTramon/Rocket-NFTs',
+      stack: ['html', 'css'],
     },
     {
       image: '/projects/admin_template',
@@ -121,6 +206,7 @@ const Projects = () => {
       text: t('project_admin_template'),
       site: 'https://admin-template-ten.vercel.app/',
       github: 'https://github.com/VTramon/ADMIN-TEMPLATE',
+      stack: ['react', 'typescript', 'css', 'firebase'],
     },
   ]
   return (
