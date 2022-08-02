@@ -1,6 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import ColorTransitionComponent from '../ColorTransitionComponent'
-import { CSS, Dart, Flutter, HTML, ReactJs, Sass, TypeScript } from '../Icons'
+import {
+  CSS,
+  Dart,
+  Flutter,
+  HTML,
+  ReactJs,
+  Redux,
+  Sass,
+  TypeScript,
+} from '../Icons'
 import styles from './style.module.scss'
 
 const About = () => {
@@ -56,6 +65,11 @@ const About = () => {
         <li>
           <Flutter />
           <span>Flutter</span>
+        </li>
+
+        <li>
+          <Redux />
+          <span>Redux</span>
         </li>
       </ul>
     </section>
