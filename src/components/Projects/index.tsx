@@ -33,7 +33,47 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
       </div>
 
       <a href={props.data.site} rel="noreferrer" target="_blank">
-        <img src={props.data.image} loading="lazy" alt={props.data.alt} />
+        <picture>
+          <source
+            srcSet={`${props.data.image}_pc.webp`}
+            media={'(min-width: 770px)'}
+          />
+          <source
+            srcSet={`${props.data.image}_pc.png`}
+            media={'(min-width: 770px)'}
+          />
+
+          <source
+            srcSet={`${props.data.image}_mobile.webp`}
+            media={'(max-width: 769px)'}
+          />
+          <source
+            srcSet={`${props.data.image}_mobile.png`}
+            media={'(max-width: 769px)'}
+          />
+
+          <img
+            src={`${props.data.image}_pc.webp`}
+            loading={'lazy'}
+            alt={props.data.alt}
+          />
+          <img
+            src={`${props.data.image}_pc.png`}
+            loading={'lazy'}
+            alt={props.data.alt}
+          />
+
+          <img
+            src={`${props.data.image}_mobile.webp`}
+            loading={'lazy'}
+            alt={props.data.alt}
+          />
+          <img
+            src={`${props.data.image}_mobile.png`}
+            loading={'lazy'}
+            alt={props.data.alt}
+          />
+        </picture>
       </a>
     </div>
   )
@@ -41,6 +81,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
 
 const Projects = () => {
   const { t } = useTranslation()
+
   const cardList: {
     image: string
     alt: string
@@ -50,7 +91,7 @@ const Projects = () => {
     github: string
   }[] = [
     {
-      image: '/projects/pokedex.webp',
+      image: '/projects/pokedex',
       alt: 'Pokedex site',
       name: 'Pokedex',
       text: t('project_pokedex'),
@@ -58,7 +99,7 @@ const Projects = () => {
       github: 'https://github.com/VTramon/Pokedex',
     },
     {
-      image: '/projects/be_healthy.webp',
+      image: '/projects/be_healthy',
       alt: 'Be healthy site',
       name: 'Be healthy',
       text: t('project_be_healthy'),
@@ -66,7 +107,7 @@ const Projects = () => {
       github: 'https://github.com/VTramon/Be-healthy',
     },
     {
-      image: '/projects/rocket_nfts.webp',
+      image: '/projects/rocket_nfts',
       alt: 'Rocket NFTs site',
       name: 'Rocket NFTs',
       text: t('project_rocket_nfts'),
@@ -74,15 +115,7 @@ const Projects = () => {
       github: 'https://github.com/VTramon/Rocket-NFTs',
     },
     {
-      image: '/projects/one_piece.webp',
-      alt: 'One Piece site',
-      name: 'One Piece',
-      text: t('project_one_piece'),
-      site: 'https://one-piece-theta.vercel.app/',
-      github: 'https://github.com/VTramon/landing-page-One-Piece',
-    },
-    {
-      image: '/projects/admin_template.webp',
+      image: '/projects/admin_template',
       alt: 'Admin template site',
       name: 'Admin Template',
       text: t('project_admin_template'),
